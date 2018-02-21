@@ -1,6 +1,6 @@
 angular.module('primeiraApp').factory('gridSystem', [ function () {
   function toCssClasses(numbers) {
-    const cols = number ? numbers.split(' ') : []
+    const cols = Number ? numbers.split(' ') : []
     let classes = ''
 
     if(cols[0]) classes += `col-xs-${cols[0]}`
