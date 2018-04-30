@@ -6,4 +6,4 @@ public
 modules.xml
 vcs.xml
 misc.xml
-.idea/workspace.xml
+.idea/*
