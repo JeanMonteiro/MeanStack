@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6791771-e6ad-412e-8859-6ffc611e2063" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="c6791771-e6ad-412e-8859-6ffc611e2063" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,7 +17,7 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular1/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="0">
               <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="24" />
               <folding />
             </state>
@@ -40,8 +37,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -170,6 +167,11 @@
             <path>
               <item name="MeanStack" type="b2602c69:ProjectViewProjectNode" />
               <item name="MeanStack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MeanStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeanStack" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MeanStack" type="b2602c69:ProjectViewProjectNode" />
@@ -334,12 +336,12 @@
       <workItem from="1523685214962" duration="5270000" />
       <workItem from="1524435656571" duration="5173000" />
       <workItem from="1525019254842" duration="439000" />
-      <workItem from="1525113077484" duration="810000" />
+      <workItem from="1525113077484" duration="919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14458000" />
+    <option name="totallyTimeSpent" value="14567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
@@ -742,7 +744,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular1/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="0">
           <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="24" />
           <folding />
         </state>
@@ -814,10 +816,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13311">
+          <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
