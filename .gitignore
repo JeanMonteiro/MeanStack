@@ -2,7 +2,3 @@ node_modules
 public
 *.log
 .DS_Store
-*.iml
-modules.xml
-vcs.xml
-misc.xml
