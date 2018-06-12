@@ -11,3 +11,7 @@ html {
 #toast-container {
   top: 70px;
 }
+
+.modal-body{
+  display: inline-block;
+}

@@ -1,0 +1,50 @@
+<div class="col-lg-6" style="padding-right: 0">
+    <div class="box box-default">
+        <div class="box-header with-border">
+
+            <h3 class="box-title">
+                <span style="color: red"><i class="fa fa-arrow-up pull-left"></i> Débitos</span>
+            </h3>
+
+            <span class="pull-right">
+                <button type="button" class="btn-xs btn-block btn-success" data-toggle="modal" data-target="#modal-debit">
+                    <span class="fa fa-plus"></span>
+                </button>
+            </span>
+
+        </div>
+
+        <table class="table table-bordered table-hover dataTable">
+            <thead>
+                <tr role="row">
+                    <th style="text-align: center">Nome</th>
+                    <th style="width: 25%;text-align: center">Valor</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="debit in billingCycle.debit">
+                    <td>{{debit.nome}}</td>
+                    <td>{{debit.valor}}</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+            <tr>
+                <th style="text-align: right">Total</th>
+                <th style="width: 25%"></th>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    <pagination url="#" pages="2" </pagination>
+                </th>
+            </tr>
+
+            </tfoot>
+        </table>
+
+
+    </div>
+
+</div>

@@ -5,13 +5,15 @@
     <title>Primeira app</title>
 
     <link rel="stylesheet" href="/assets/css/deps.min.css">
-    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <!--<link rel="stylesheet" href="/assets/css/app.min.css">-->
+
+    <!-- inject:css -->
+    <!-- endinject -->
 
   </head>
 
-  <body class="skin-blue fixed sidebar-mini">
-
-    <div class="wrapper">
+  <body class="skin-blue fixed sidebar-mini" ng-controller="mainController">
+    <div>
       <header class="main-header" ng-include="'/template/header.html'"></header>
       <aside class="main-sidebar" ng-include="'/template/menu.html'"></aside>
       <div class="content-wrapper" ui-view></div>
@@ -19,7 +21,10 @@
     </div>
 
     <script src="/assets/js/deps.min.js"></script>
-    <script src="/assets/js/app.min.js"></script>
+    <!--<script src="/assets/js/app.min.js"></script>-->
+
+    <!-- inject:js -->
+    <!-- endinject -->
   </body>
 
 </html>
