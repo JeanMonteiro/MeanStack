@@ -11,48 +11,29 @@ angular.module('primeiraApp').component('datePicker', {
 
     controller: [
         'gridSystem', function(gridSystem) {
+
             this.$onInit = function (){
                 this.gridClasses = gridSystem.toCssClasses(this.grid)
                 this.type = this.type != undefined ? this.type : "datepicker";
 
-	            $(".datepicker").datepicker({autoclose: true, format: 'dd/mm/yyyy'});
+	            $(document).ready(function () {
+	               $(".datepicker").datepicker({autoclose: true, format: 'dd/mm/yyyy'});
 
-	            $(".datepicker-month").datepicker({
-		            autoclose: true,
-		            format: 'mm',
-		            viewMode: "months",
-		            minViewMode: "months"
+	               $(".datepicker-month").datepicker({
+	                autoclose: true,
+	                format: 'mm',
+	                viewMode: "months",
+	                minViewMode: "months"
+	               });
+
+	               $(".datepicker-year").datepicker({
+	                autoclose: true,
+	                format: 'yyyy',
+	                viewMode: "years",
+	                minViewMode: "years"
+	               });
 	            });
-
-	            $(".datepicker-year").datepicker({
-		            autoclose: true,
-		            format: 'yyyy',
-		            viewMode: "years",
-		            minViewMode: "years"
-	            });
-
             }
-
-		    // $(document).ready(function () {
-			 //    $(".datepicker").datepicker({autoclose: true, format: 'dd/mm/yyyy'});
-		    //
-			 //    $(".datepicker-month").datepicker({
-				//     autoclose: true,
-				//     format: 'mm',
-				//     viewMode: "months",
-				//     minViewMode: "months"
-			 //    });
-		    //
-			 //    $(".datepicker-year").datepicker({
-				//     autoclose: true,
-				//     format: 'yyyy',
-				//     viewMode: "years",
-				//     minViewMode: "years"
-			 //    });
-		    // });
-
-
-
         }
     ],
 
@@ -63,7 +44,7 @@ angular.module('primeiraApp').component('datePicker', {
             <div class="input-group-addon">
                 <i class="fa fa-calendar"></i>
             </div>
-            <input ng-model="$ctrl.model" id="{{ $ctrl.id }}" class="form-control pull-right {{$ctrl.type}}">
+            <input ng-model="$ctrl.model" id="{{ $ctrl.id }}" class="{{$ctrl.type}} form-control pull-right">
         </div>
     </div>
   `
