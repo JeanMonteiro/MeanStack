@@ -9,30 +9,29 @@ angular.module('primeiraApp').component('datePicker', {
         readonly: '<'
     },
 
-    controller: [
-        'gridSystem', function(gridSystem) {
+    controller: [ 'gridSystem', '$timeout', function(gridSystem, $timeout) {
+
+	    $timeout(function () {
+		    $(".datepicker").datepicker({autoclose: true, format: 'dd/mm/yyyy'});
+
+		    $(".datepicker-month").datepicker({
+			    autoclose: true,
+			    format: 'mm',
+			    viewMode: "months",
+			    minViewMode: "months"
+		    });
+
+		    $(".datepicker-year").datepicker({
+			    autoclose: true,
+			    format: 'yyyy',
+			    viewMode: "years",
+			    minViewMode: "years"
+		    });
+	    })
 
             this.$onInit = function (){
                 this.gridClasses = gridSystem.toCssClasses(this.grid)
                 this.type = this.type != undefined ? this.type : "datepicker";
-
-	            $(document).ready(function () {
-	               $(".datepicker").datepicker({autoclose: true, format: 'dd/mm/yyyy'});
-
-	               $(".datepicker-month").datepicker({
-	                autoclose: true,
-	                format: 'mm',
-	                viewMode: "months",
-	                minViewMode: "months"
-	               });
-
-	               $(".datepicker-year").datepicker({
-	                autoclose: true,
-	                format: 'yyyy',
-	                viewMode: "years",
-	                minViewMode: "years"
-	               });
-	            });
             }
         }
     ],
