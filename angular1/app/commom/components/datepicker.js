@@ -9,32 +9,54 @@ angular.module('primeiraApp').component('datePicker', {
         readonly: '<'
     },
 
-    controller: [ 'gridSystem', '$timeout', function(gridSystem, $timeout) {
+    controller: [ 'gridSystem', '$timeout', '$element', function(gridSystem, $timeout, $element) {
+        var changeDateModel = function(ev){
+            controller.model = ev.target.value;
+        };
 
-	    $timeout(function () {
-		    $(".datepicker").datepicker({autoclose: true, format: 'dd/mm/yyyy'});
+        var datepickerElement = $element[0];
 
-		    $(".datepicker-month").datepicker({
-			    autoclose: true,
-			    format: 'mm',
-			    viewMode: "months",
-			    minViewMode: "months"
-		    });
+        $timeout(function () {
 
-		    $(".datepicker-year").datepicker({
-			    autoclose: true,
-			    format: 'yyyy',
-			    viewMode: "years",
-			    minViewMode: "years"
-		    });
-	    })
+            var month =     $(datepickerElement).find('.datepicker-month');
+            var year =      $(datepickerElement).find('.datepicker-year');
+            var generic =   $(datepickerElement).find('.datepicker');
 
-            this.$onInit = function (){
-                this.gridClasses = gridSystem.toCssClasses(this.grid)
-                this.type = this.type != undefined ? this.type : "datepicker";
+            if(month.length > 0){
+                month.datepicker({
+                    autoclose: true,
+                    format: 'mm',
+                    viewMode: "months",
+                    minViewMode: "months"
+                }).on('changeDate', function () {
+                    angular.element($(this)).triggerHandler('input');
+                });
+            }else if(year.length > 0){
+                year.datepicker({
+                    autoclose: true,
+                    format: 'yyyy',
+                    viewMode: "years",
+                    minViewMode: "years"
+                }).on('changeDate', function () {
+                    angular.element($(this)).triggerHandler('input');
+                });
+            }else{
+                generic.datepicker({
+                    autoclose: true,
+                    format: 'dd/mm/yyyy'
+                }).on('changeDate', function () {
+                    angular.element($(this)).triggerHandler('input');
+                });
             }
+
+        })
+
+        this.$onInit = function (){
+            var type = this.type != undefined ? this.type : "datepicker";
+            this.type = type;
+            this.gridClasses = gridSystem.toCssClasses(this.grid)
         }
-    ],
+    }],
 
     template: `
     <div class="{{ $ctrl.gridClasses}}">
@@ -43,7 +65,7 @@ angular.module('primeiraApp').component('datePicker', {
             <div class="input-group-addon">
                 <i class="fa fa-calendar"></i>
             </div>
-            <input ng-model="$ctrl.model" id="{{ $ctrl.id }}" class="{{$ctrl.type}} form-control pull-right">
+            <input ng-model="$ctrl.model" id="{{$ctrl.id}}" class="{{$ctrl.type}} form-control pull-right">
         </div>
     </div>
   `
