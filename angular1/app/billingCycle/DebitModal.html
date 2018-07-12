@@ -6,7 +6,12 @@
                     <span aria-hidden="true">×</span></button>
                 <h4 style="color: red" class="modal-title">Débito</h4>
             </div>
-            <div class="modal-body" ng-include="'/billingCycle/billingCycleForm.html'"></div>
+            <div class="modal-body">
+                <field label="Nome" type="text" grid="12" model="ctrl.debit.name"></field>
+                <date-picker type="datepicker-month" label="mes" grid="4" model="ctrl.debit.month"></date-picker>
+                <date-picker type="datepicker-year" label="ano" grid="4" model="ctrl.debit.year"></date-picker>
+                <field label="Valor" grid="4" model="ctrl.debit.value"></field>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-success">Salvar</button>

@@ -16,7 +16,7 @@ server.listen(port, function () {
 })
 
 server.get('/', function(req, res, next){
-  res.send('Tá funfando!!!!')
+    res.send('Works!')
 })
 
 module.exports = server

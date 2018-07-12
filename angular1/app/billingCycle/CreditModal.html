@@ -6,10 +6,15 @@
                     <span aria-hidden="true">×</span></button>
                 <h4 style="color: green" class="modal-title">Crédito</h4>
             </div>
-            <div class="modal-body" ng-include="'/billingCycle/billingCycleForm.html'"></div>
+            <div class="modal-body">
+                <field label="Nome" type="text" grid="12" model="ctrl.credit.name"></field>
+                <date-picker type="datepicker-month" label="mes" grid="4" model="ctrl.credit.month"></date-picker>
+                <date-picker type="datepicker-year" label="ano" grid="4" model="ctrl.credit.year"></date-picker>
+                <field label="Valor" grid="4" model="ctrl.credit.value"></field>
+            </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success">Salvar</button>
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal" ng-click="ctrl.clear(ctrl,'credit')">Cancelar</button>
+                <button type="button" class="btn btn-success" ng-click="ctrl.createCredit()">Salvar</button>
             </div>
         </div>
     </div>

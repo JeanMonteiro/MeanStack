@@ -4,7 +4,7 @@
   "description": "",
   "main": "loader.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": " nodemon",
     "production" : "pm2 start loader.js --name projeto_mnea"
   },
   "author": "Jean Monteiro",
