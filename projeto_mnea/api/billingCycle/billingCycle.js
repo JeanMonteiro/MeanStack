@@ -1,7 +1,6 @@
 const restful = require('node-restful')
 const _ = require('lodash')
-const billingType = require('./billingType')
-const billingStatus = require('./billingStatus')
+const billingEnum = require('./billingEnum')
 const mongoose = restful.mongoose
 
 const creditSchema = new mongoose.Schema({
@@ -30,9 +29,9 @@ const billingCycleSchema = new mongoose.Schema({
     month: { type: Number, min: 1, max: 12, required: true },
     year: { type: Number, min: 1970, max: 2100, required: true },
     status: { type: String, required: false, uppercase: true,
-        enum: _.values(billingStatus) },
+        enum: _.values(billingEnum.billingStatus.toJSON()) },
     type: { type: String, required: false, uppercase: true,
-        enum: _.values(billingType) }
+        enum: _.values(billingEnum.billingType.toJSON()) }
 })
 
 module.exports = restful.model('BillingCycle', billingCycleSchema)

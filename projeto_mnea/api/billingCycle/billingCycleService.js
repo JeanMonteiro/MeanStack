@@ -2,6 +2,7 @@ const _ = require('lodash')
 const BillingCycle = require('./billingCycle')
 const billingCylceType = require('./billingType')
 const billingCylceStatus = require('./billingStatus')
+const billingEnum = require('./billingEnum')
 
 BillingCycle.methods(['get', 'post', 'put', 'delete'])
 BillingCycle.updateOptions({new: true, runValidators: true})
@@ -43,20 +44,8 @@ BillingCycle.route('status', function (req, res) {
     res.json(_.keys(billingCylceStatus))
 })
 
-const asdf = Object.freeze(
-    {
-        "DEBITO": {name: "Débito", code: 1},
-        "CREDITO": {name: "Crédito", code: 2}
-    })
-
 BillingCycle.route('asdf', function (req, res) {
-    // res.json(_.mapValues(asdf, function (o) {
-    //     return o.code;
-    // }))
-    // {
-    //     "DEBITO": 1,
-    //     "CREDITO": 2
-    // }
+    res.json(_.values(billingEnum.billingStatus.toJSON()))
 })
 
 module.exports = BillingCycle
